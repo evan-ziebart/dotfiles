@@ -1,0 +1,9 @@
+[user]
+	name = Evan Ziebart
+	email = evanz@duolingo.com
+[credential]
+	helper = osxkeychain
+[init]
+	templateDir = /Users/evanz/.git-template
+[core]
+	autocrlf = input
