@@ -1,6 +1,3 @@
-# Duolingo CLI - https://github.com/duolingo/cli
-. "${HOME}/.duolingo/init.sh"
-
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
   PATH=$(pyenv root)/shims:$PATH
@@ -9,11 +6,14 @@ fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+export PATH="${HOMEBREW_PREFIX}/opt/openssl/bin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
+
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/evanz/.oh-my-zsh"
 
-# Dotfile management
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+# Duolingo CLI - https://github.com/duolingo/cli
+. "${HOME}/.duolingo/init.sh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -110,3 +110,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Dotfile management
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'

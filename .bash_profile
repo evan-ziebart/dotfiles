@@ -1,6 +1,11 @@
 # Duolingo CLI - https://github.com/duolingo/cli
 . "${HOME}/.duolingo/init.sh"
 
+export PATH="${HOMEBREW_PREFIX}/opt/openssl/bin:$PATH"
+
+# Add Visual Studio Code (Code)
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
 function parse_git_branch {
     git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
