@@ -1,4 +1,4 @@
-config_repo='git@github.com:evan-ziebart/dotfiles.git'
+config_repo='https://github.com/evan-ziebart/dotfiles.git'
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 git clone --bare $config_repo $HOME/.cfg
 config checkout
