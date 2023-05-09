@@ -1,0 +1,2 @@
+# directory with bare repo (to prevent recursion issues)
+.cfg/**
